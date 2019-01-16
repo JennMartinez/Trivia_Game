@@ -10,9 +10,10 @@ h1 {
     margin-top: 5px;
     font-stretch: expanded;
     margin-bottom: 50px;
+    margin-right: 50px;
 }
 
-.start.button {
+.start {
     font-family: 'Nosifer', cursive;
     text-align: center;
     font-size: 25px;
@@ -24,6 +25,97 @@ h1 {
     background-color: rgb(54, 16, 16);
     background-color: rgb(48, 12, 12);
     border-color: black;
+}
 
+#timer {
+    color: aliceblue;
+}
+
+#timer-title {
+    color: aliceblue;
+}
+
+.questions {
+    color: white;
+    font-family: 'Nosifer', cursive;
+    font-size: 10px;
+    
+}
+
+#q1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#night {
+    height: 275px;
+    width: 400px;
+    align-content: center;
+    margin-left: 50px;
+
+}
+
+#q2 {
+
+}
+
+#zombie {
+
+}
+
+#q3 {
+
+}
+
+#resident {
+
+}
+
+#q4 {
+
+}
+
+#brains {
+
+}
+
+#q5 {
+
+}
+
+#rick {
+
+}
+
+#q6 {
+
+}
+
+#evil {
+
+}
+
+#q7 {
+
+}
+
+#night {
+
+}
+
+#q8 {
+
+}
+
+#days {
+
+}
+
+.exit-button {
+
+}
+
+.game-over {
+    color: white;
 
 }
