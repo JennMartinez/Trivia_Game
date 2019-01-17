@@ -7,25 +7,27 @@ h1 {
     text-align: center;
     font-size: 82px;
     color: rgb(37, 39, 36);
-    margin-top: 5px;
+    margin-top: 10px;
     font-stretch: expanded;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-right: 50px;
 }
 
 .start {
     font-family: 'Nosifer', cursive;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     display: flex; 
     justify-content: center;
     margin: 0 auto;
     height: 60px;
+    width: 560px;
     margin-top: 120px;
-    background-color: rgb(54, 16, 16);
-    background-color: rgb(48, 12, 12);
-    border-color: black;
+    background-color: black;
+    border-color: rgb(48, 12, 12);
     border-style: solid;
+    color: rgb(48, 12, 12);
+
 }
 
 #timer-title {
@@ -33,6 +35,7 @@ h1 {
     color: black;
     text-align: center;
     font-size: 45px;
+    margin-top: 77px;
 }
 
 #timer {
@@ -41,100 +44,235 @@ h1 {
     font-size: 35px;
     justify-content: center;
     margin: 0 auto;
-    height: 60px;
-    width: 400px;
-    margin-top: 10px;
-    background-color: rgb(54, 16, 16);
-    background-color: rgb(48, 12, 12);
-    border-color: black;
+    height: 55px;
+    width: 425px;
+    background-color:black;
+    border-color: rgb(48, 12, 12);;
     border-style: solid;
+    color: rgb(48, 12, 12);
     
 }
 
 .questions {
-    color: white;
     font-family: 'Nosifer', cursive;
-    font-size: 15px;
+    font-size: 22px;
     
+}
+
+input[type="radio"]{
+    margin: 15px;
+}
+
+#night {
+    width: 550px;
+    height: 275px;
+    align-content: center;
+    margin-left: 430px;
+    margin-top: 35px;
 }
 
 #q1 {
-    margin-bottom: 30px;
     text-align: center;
+    color: black;
+    margin-top: 60px;
+    margin-bottom: 2px;
 }
 
-#night {
-    height: 275px;
-    width: 400px;
-    align-content: center;
-    margin-left: 50px;
-
-}
-
-#q2 {
-
+#a1 {
+    text-align: center;
+    color:  rgb(48, 12, 12);
+    margin-top: 60px;
+    margin-bottom: 2px;
 }
 
 #zombie {
-
+    margin-left: 400px;
+    margin-top: 55px;
+    width: 550px;
+    height: 275px;
 }
 
-#q3 {
+#q2 {
+    text-align: center;
+    color: black; 
+    margin-top: 60px;
+    margin-bottom: 2px; 
+}
 
+#a2 {
+    text-align: center;
+    color:  rgb(48, 12, 12);
+    margin-top: 60px;
+    margin-bottom: 2px;    
 }
 
 #resident {
-
+    margin-left: 400px;
+    margin-top: 55px;
+    width: 550px;
+    height: 275px;
 }
 
-#q4 {
+#q3 {
+    text-align: center;
+    color: black;
+    margin-top: 60px;
+    margin-bottom: 2px;  
+}
 
+#a3 {
+    text-align: center;
+    color:  rgb(48, 12, 12);
+    margin-top: 60px;
+    margin-bottom: 2px;
 }
 
 #brains {
-
+    margin-left: 420px;
+    margin-top: 55px;
+    width: 550px;
+    height: 275px;
 }
 
-#q5 {
+#q4 {
+    text-align: center;
+    color: black;
+    margin-top: 60px;
+    margin-bottom: 2px;  
+}
 
+#a4 {
+    text-align: center;
+    color:  rgb(48, 12, 12);
+    margin-top: 60px;
+    margin-bottom: 2px;
 }
 
 #rick {
-
+    margin-left: 400px;
+    margin-top: 55px;
+    width: 550px;
+    height: 275px;
 }
 
-#q6 {
+#q5 {
+    text-align: center;
+    color: black;
+    margin-top: 60px;
+    margin-bottom: 2px;  
+}
 
+#a5 {
+    text-align: center;
+    color:  rgb(48, 12, 12);
+    margin-top: 60px;
+    margin-bottom: 2px;
 }
 
 #evil {
+    margin-left: 400px;
+    margin-top: 55px;
+    width: 550px;
+    height: 275px;
+}
 
+#q6 {
+    text-align: center;
+    color: black;
+    margin-top: 60px;
+    margin-bottom: 2px;  
+}
+
+#a6 {
+    text-align: center;
+    color:  rgb(48, 12, 12);
+    margin-top: 60px;
+    margin-bottom: 2px;
+}
+
+#shaun {
+    margin-left: 400px;
+    margin-top: 55px;
+    width: 550px;
+    height: 275px;
 }
 
 #q7 {
-
+    text-align: center;
+    color: black;
+    margin-top: 60px;
+    margin-bottom: 2px;  
 }
 
-#night {
-
-}
-
-#q8 {
-
+#a7 {
+    text-align: center;
+    color:  rgb(48, 12, 12);
+    margin-top: 60px;
+    margin-bottom: 2px;
 }
 
 #days {
+    margin-left: 400px;
+    margin-top: 55px;
+    width: 550px;
+    height: 275px;
+}
 
+#q8 {
+    text-align: center;
+    color: black;
+    margin-top: 60px;
+    margin-bottom: 2px;  
+}
+
+#a8 {
+    text-align: center;
+    color:  rgb(48, 12, 12);
+    margin-top: 60px;
+    margin-bottom: 2px;
+}
+
+#exit {
+    margin-left: 400px;
+    margin-top: 55px;
+    width: 550px;
+    height: 275px;   
 }
 
 .exit-button {
-    
+    font-family: 'Nosifer', cursive;
+    text-align: center;
+    font-size: 30px;
+    display: flex; 
+    justify-content: center;
+    margin: 0 auto;
+    height: 60px;
+    width: 560px;
+    margin-top: 120px;
+    background-color:black;
+    border-color: rgb(48, 12, 12);;
+    border-style: solid;
+    color: rgb(48, 12, 12);
+    border-style: solid;
+    margin-left: 396px;   
 }
 
-.game-over {
-    color: white;
+.the-end {
+    font-family: 'Nosifer', cursive;
+    color: black;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 20px;
+}
+
+#correct {
 
 }
 
-.reset-button {
+#incorrect {
+
+}
+
+#unanswered {
+
 }

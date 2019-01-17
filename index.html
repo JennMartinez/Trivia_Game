@@ -7,92 +7,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <style type="text/css"></style> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
 </head>
 <body>
-
+        
     <h1>ZOMBIE TRIVIA</h1>
-
+    
     <button class="start">Enter At Your Own Risk!</button>
     
     <div id="timer-title">Zombie Countdown</div>
     <div id="timer">01:20</div>
-    
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="questions">
-        <img id="night" src="assets/images/nightofthelivingdead.gif" alt="Night of the Living Dead"/>
-         <br>
-        <p>Where does the 1968 George Romero film, "Night of the Living Dead," take place?</p>
-            <p id="q1">
-                <input type="radio" name="question1">Washington
-                <input type="radio" name="question1">Montana
-                <input type="radio" name="question1">New York
-                <input type="radio" name="question1">Pennsylvania
-            </p>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <img id="zombie" src="assets/images/clown.gif" alt="Zombieland"/>
-        <p>In the movie, "Zombieland," Woody Harrelson's character's name is?</p>
-            <p id="q2">
-                <input type="radio" name="question2">Skates
-                <input type="radio" name="question2">Tallahassee
-                <input type="radio" name="question2">Jack
-                <input type="radio" name="question2">Columbus
-            </p>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <img id="resident" src="assets/images/Resident Evil Gif 2.gif" alt="Resident Evil Game"/>    
-        <p>What zombie films are based off of a video game series?</p>
-            <p id="q3">
-                <input type="radio" name="question3">Dead Zone
-                <input type="radio" name="question3">War Z
-                <input type="radio" name="question3">Resident Evil
-                <input type="radio" name="question3">Day of the Dead
-            </p>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <img id="brains" src="assets/images/walkingdead.gif" alt="Zombie brains"/>
-        <p>What do zombies prefer to feast on?</p>
-            <p id="q4">
-                <input type="radio" name="question4">Birds
-                <input type="radio" name="question4">Brains
-                <input type="radio" name="question4">Toes
-                <input type="radio" name="question4">Plastic
-            </p>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <img id="rick" src="assets/images/rick.gif" alt="The Walking Dead"/>
-        <p>In the show, "The Walking Dead," who saved Rick in Atlanta?</p>
-            <p id="q5">
-                <input type="radio" name="question5">Daryl
-                <input type="radio" name="question5">Andrea
-                <input type="radio" name="question5">Glen
-                <input type="radio" name="question5">Carol
-            </p>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <img id="evil" src="assets/images/redqueen.gif" alt="Resident Evil Movie"/>
-        <p>The movie, "Resident Evil," took place in an underground researh facility, known as the hive. What is the name of the facility's artificial intelligence?</p>
-            <p id="q6">
-                <input type="radio" name="question6">Red Queen
-                <input type="radio" name="question6">Falkor
-                <input type="radio" name="question6">Zombinator
-                <input type="radio" name="question6">A.I.
-            </p>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <img id="night" src="assets/images/shaun.gif" alt="Shaun of the Dead"/>
-        <p>What is the name of the characters hangout spot in the movie, "Shaun of the Dead?"</p>
-            <p id="q7">
-                <input type="radio" name="question7">Three Sheets
-                <input type="radio" name="question7">Colebrooke Row
-                <input type="radio" name="question7">The Winchester
-                <input type="radio" name="question7">The Hops and Glory
-            </p>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <img id="days" src="assets/images/28days3.gif" alt="28 Days Later"/>
-        <p>In the movie, "28 Days Later," what is the name of the virus that caused the zombie outbreak?</p>
-            <p id="q8">
-                <input type="radio" name="question8">A-Virus
-                <input type="radio" name="question8">Z-Strain
-                <input type="radio" name="question8">Rage Virus
-                <input type="radio" name="question8">T-Strain
-            </p> 
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <button class="exit-button">Exit With Caution!</button>
+        <h1>ZOMBIE TRIVIA</h1>
+            <img id="night" src="assets/images/NLD.gif" alt="Night of the Living Dead"/>
+            <div id="q1">
+                <p>Where does the 1968 George Romero film, "Night of the Living Dead," take place?</p>
+            </div>
+                <p id="a1">
+                    <input type="radio" name="question1">Washington
+                    <input type="radio" name="question1">Montana
+                    <input type="radio" name="question1">New York
+                    <input type="radio" name="question1">Pennsylvania
+                </p>
+            <br><br><br><br><br>
+        <h1>ZOMBIE TRIVIA</h1>
+            <img id="zombie" src="assets/images/clown.gif" alt="Zombieland"/>
+            <div id="q2">
+                <p>In the movie, "Zombieland," Woody Harrelson's character's name is?</p>
+            </div>
+                <p id="a2">
+                    <input type="radio" name="question2">Skates
+                    <input type="radio" name="question2">Tallahassee
+                    <input type="radio" name="question2">Jack
+                    <input type="radio" name="question2">Columbus
+                </p>
+                <br><br><br><br>
+        <h1>ZOMBIE TRIVIA</h1>
+            <img id="resident" src="assets/images/ResidentEvil4.gif" alt="Resident Evil Game"/> 
+            <div id="q3"> 
+                <p>What zombie films are based off of a video game series?</p>
+            </div>  
+                <p id="a3">
+                    <input type="radio" name="question3">Dead Zone
+                    <input type="radio" name="question3">War Z
+                    <input type="radio" name="question3">Resident Evil
+                    <input type="radio" name="question3">Day of the Dead
+                </p>
+                <br><br><br><br>
+        <h1>ZOMBIE TRIVIA</h1>
+            <img id="brains" src="assets/images/walkingdead.gif" alt="Zombie brains"/>
+            <div id="q4">
+                <p>What do zombies prefer to feast on?</p>
+            </div>
+                <p id="a4">
+                    <input type="radio" name="question4">Birds
+                    <input type="radio" name="question4">Brains
+                    <input type="radio" name="question4">Toes
+                    <input type="radio" name="question4">Plastic
+                </p>
+                <br><br><br><br><br>
+        <h1>ZOMBIE TRIVIA</h1>
+            <img id="rick" src="assets/images/rick.gif" alt="The Walking Dead"/>
+            <div id="q5">
+                <p>In the show, "The Walking Dead," who saved Rick in Atlanta?</p>
+            </div>    
+                <p id="a5">
+                    <input type="radio" name="question5">Daryl
+                    <input type="radio" name="question5">Andrea
+                    <input type="radio" name="question5">Glen
+                    <input type="radio" name="question5">Carol
+                </p>
+                <br><br><br><br>
+        <h1>ZOMBIE TRIVIA</h1>
+            <img id="evil" src="assets/images/redqueen.gif" alt="Resident Evil Movie"/>
+            <div id="q6">
+                <p>The movie, "Resident Evil," took place in an underground researh facility, known as the hive. What is the name of the facility's artificial intelligence?</p>
+            </div>
+                <p id="a6">
+                    <input type="radio" name="question6">Red Queen
+                    <input type="radio" name="question6">Falkor
+                    <input type="radio" name="question6">Zombinator
+                    <input type="radio" name="question6">A.I.
+                </p>
+                <br><br><br><br>
+        <h1>ZOMBIE TRIVIA</h1>
+            <img id="shaun" src="assets/images/shaun.gif" alt="Shaun of the Dead"/>
+            <div id="q7">
+                <p>What is the name of the characters hangout spot in the movie, "Shaun of the Dead?"</p>
+            </div>
+                <p id="a7">
+                    <input type="radio" name="question7">Three Sheets
+                    <input type="radio" name="question7">Colebrooke Row
+                    <input type="radio" name="question7">The Winchester
+                    <input type="radio" name="question7">The Hops and Glory
+                </p>
+                <br><br><br><br>
+        <h1>ZOMBIE TRIVIA</h1>
+            <img id="days" src="assets/images/28days3.gif" alt="Shaun of the Dead"/>
+            <div id="q8">
+                <p>In the movie, "28 Days Later," what is the name of the virus that caused the zombie outbreak?</p>
+            </div>
+                <p id="a8">
+                    <input type="radio" name="question8">A-Virus
+                    <input type="radio" name="question8">Z-Strain
+                    <input type="radio" name="question8">Rage Virus
+                    <input type="radio" name="question8">T-Strain
+                </p> 
+                <br><br><br>
+        <h1>ZOMBIE TRIVIA</h1>  
+            <img id="exit" src="assets/images/exit.gif" alt="exit zombies"/>
+                <button class="exit-button">Exit With Caution!</button>
+                <br><br><br>
     </div>
 
     <div class="game-over">
@@ -100,8 +128,6 @@
         <div id="correct">Brains: 0</div>
         <div id="incorrect">Half-Brains: 0</div>
         <div id="unanswered">No Brains: 0</div>
-        <br>
-        <button class="reset-button">Try Again, If You Dare!</button>
     </div>
 
     <script src="assets/javascript/app.js"></script>

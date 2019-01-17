@@ -4,9 +4,8 @@ var answers = ["Pennsylvania", "Tallahassee", "Resident Evil", "Brains", "Glen",
 var right = 0;
 var wrong = 0;
 var noAnswer = 0;
-var clockRunning = 400000;
-var totalQuestions = 8;
-// var playerAnswers = [];
+var clockRunning = 40000;
+var playerAnswers;
 
 // var question1 = document.questions.question1.value;
 // var question2 = document.questions.question2.value;
@@ -28,7 +27,6 @@ $("#timer-title").hide();
 $(".questions").hide();
 $(".exit-button").hide();
 $(".game-over").hide();
-$(".reset-button").hide();
 
 // START BUTTON click takes user to new screen //
 
@@ -39,27 +37,57 @@ $(".start").on("click", function() {
     $("#timer").show();
     $("#timer-title").show();
     $(".exit-button").show();
-    $(".reset-button").show();
+});
+
+// New screen STARTS the TIMER, counting down (120 sec.) //
+// If the timer runs out before the user clicks the DONE BUTTON, a new screen will display, 
+// GAME OVER, and the users correct/incorrect/unanswered questions are displayed //
+
+var start = setInterval(function() {
+        $("#timer").text(clockRunning--);
+        if (clockRunning == -1) {
+        
+        clearInterval(timer);
+        $(".questions").hide(); 
+        $("#timer").show();
+        $(".exit-button").show();
+        $(".game-over").show();
+        $("#timer-title").show();
+        tally();
+        }
+}, 1000);
+ 
+// Only ONE available choice can be selected from the answers to each question //
+// If DONE BUTTON is clicked, it displays a new screen //
+// CORRECT/INCORRECT/UNANSWERED question(s) are displayed at the end of the game //
+// The new screen displays, GAME OVER and the users correct/incorrect/unanswered question(s) are displayed //
+
+$(".exit-button").on("click", function() {
+        $(".exit-button").show();
+        $(".start").hide();
+        $(".questions").hide();
+        $("#timer").hide();
+        $("#timer-title").hide();
+        $(".game-over").show();
 });
 
 
 // Compare users guesses versus correct answers //
 
+function tally() {
+        if (playerAnswers == answers[i]) {
+        right++
+        $("#correct").text("Brains: " + right);
+} else if (playerAnswers != answers[i]) {
+        wrong++
+        $("#incorrect").text("Half-Brains: " + wrong);
 
+} else {
+        noAnswer++;
+        $("#unanswered").text("No brains: " + noAnswer);
+};
+};
 
-// function tally() {
-//         if (playerAnswers == answers) {
-//         right++
-//         $("#correct").text("Brains: " + right);
-// } else if (playerAnswers != answers) {
-//         wrong++
-//         $("#incorrect").text("Half-Brains: " + wrong);
-
-// } else {
-//         noAnswer++;
-//         $("#unanswered").text("No brains: " + noAnswer);
-// }
-// }
 // function tally() {
 //         if (question1 == "Pennsylvania") {
 //                 right++
@@ -132,43 +160,4 @@ $(".start").on("click", function() {
 
 // };
 
-// New screen STARTS the TIMER, counting down (120 sec.) //
-// If the timer runs out before the user clicks the DONE BUTTON, a new screen will display, 
-// GAME OVER, and the users correct/incorrect/unanswered questions are displayed //
-
-var start = setInterval(function() {
-        $("#timer").text(clockRunning--);
-        if (clockRunning == -1) {
-        
-        clearInterval(timer);
-        $(".questions").hide(); 
-        $("#timer").hide();
-        $(".exit-button").show();
-        $(".game-over").show();
-        $("#timer-title").hide();
-        tally();
-        }
-}, 1000);
- 
-// Only ONE available choice can be selected from the answers to each question //
-// If DONE BUTTON is clicked, it displays a new screen //
-// CORRECT/INCORRECT/UNANSWERED question(s) are displayed at the end of the game //
-// The new screen displays, GAME OVER and the users correct/incorrect/unanswered question(s) are displayed //
-
-$(".exit-button").on("click", function() {
-        $(".exit-button").show();
-        $(".start").hide();
-        $(".questions").hide();
-        $("#timer").hide();
-        $("#timer-title").hide();
-        $(".game-over").show();
-});
-
-// RESET BUTTON to start the game over, again //
-
-// $(".reset-button").on("click", function() {
-//         $(".reset-button").hide();
-
-// }
-   
 });
