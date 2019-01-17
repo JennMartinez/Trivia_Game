@@ -25,20 +25,36 @@ h1 {
     background-color: rgb(54, 16, 16);
     background-color: rgb(48, 12, 12);
     border-color: black;
-}
-
-#timer {
-    color: aliceblue;
+    border-style: solid;
 }
 
 #timer-title {
-    color: aliceblue;
+    font-family: 'Nosifer', cursive;
+    color: black;
+    text-align: center;
+    font-size: 45px;
+}
+
+#timer {
+    font-family: 'Nosifer', cursive;
+    text-align: center;
+    font-size: 35px;
+    justify-content: center;
+    margin: 0 auto;
+    height: 60px;
+    width: 400px;
+    margin-top: 10px;
+    background-color: rgb(54, 16, 16);
+    background-color: rgb(48, 12, 12);
+    border-color: black;
+    border-style: solid;
+    
 }
 
 .questions {
     color: white;
     font-family: 'Nosifer', cursive;
-    font-size: 10px;
+    font-size: 15px;
     
 }
 
