@@ -4,21 +4,15 @@ var answers = ["Pennsylvania", "Tallahassee", "Resident Evil", "Brains", "Glen",
 var right = 0;
 var wrong = 0;
 var noAnswer = 0;
-var clockRunning = 40000;
-var playerAnswers;
-
-// var question1 = document.questions.question1.value;
-// var question2 = document.questions.question2.value;
-// var question3 = document.questions.question3.value;
-// var question4 = document.questions.question4.value;
-// var question5 = document.questions.question5.value;
-// var question6 = document.questions.question6.value;
-// var question7 = document.questions.question7.value;
-// var question8 = document.questions.question8.value;
+var clockRunning = 100;
+var playerAnswers = [];
+// var zombieSounds = new Audio("./assets/bhuvububy.wav");
 
 // Document ready //
 
 $(document).ready(function() {
+
+// zombieSounds.play();
 
 // HIDE timer, questions and answers, exit button,... screen //
 
@@ -49,11 +43,10 @@ var start = setInterval(function() {
         
         clearInterval(timer);
         $(".questions").hide(); 
-        $("#timer").show();
+        $("#timer").hide();
         $(".exit-button").show();
         $(".game-over").show();
-        $("#timer-title").show();
-        tally();
+        $("#timer-title").hide();
         }
 }, 1000);
  
@@ -62,102 +55,62 @@ var start = setInterval(function() {
 // CORRECT/INCORRECT/UNANSWERED question(s) are displayed at the end of the game //
 // The new screen displays, GAME OVER and the users correct/incorrect/unanswered question(s) are displayed //
 
-$(".exit-button").on("click", function() {
+$(".exit-button").on("click", function(event) {
+        event.preventDefault();
         $(".exit-button").show();
         $(".start").hide();
         $(".questions").hide();
         $("#timer").hide();
         $("#timer-title").hide();
         $(".game-over").show();
-});
+        // zombieSounds.play();
+// Place tally code here //
 
+
+        tally();
+
+});
 
 // Compare users guesses versus correct answers //
 
+
+// playerAnswers = answers[0];
+
+        // playerAnswers.push($(defaultValue[0]).append("#a1 input:checked"));
+        // playerAnswers.push($(defaultValue[1]).append("#a2 input:checked"));
+        // playerAnswers.push($(defaultValue[2]).append("#a3 input:checked"));
+        // playerAnswers.push($(defaultValue[3]).append("#a4 input:checked"));
+        // playerAnswers.push($(defaultValue[4]).append("#a5 input:checked"));
+        // playerAnswers.push($(defaultValue[5]).append("#a6 input:checked"));
+        // playerAnswers.push($(defaultValue[6]).append("#a7 input:checked"));
+        // playerAnswers.push($(defaultValue[7]).append("#a8 input:checked"));
+        // console.log(playerAnswers);
+
+        // answers = $("#a1 input:radio[name='question1']:checked");
+        // answers = $("#a2 input:radio[name='question2']:checked");
+        // answers = $("#a3 input:radio[name='question3']:checked");
+        // answers = $("#a4 input:radio[name='question4']:checked");
+        // answers = $("#a5 input:radio[name='question5']:checked");
+        // answers = $("#a6 input:radio[name='question6']:checked");
+        // answers = $("#a7 input:radio[name='question7']:checked");
+        // answers = $("#a8 input:radio[name='question8']:checked");
+        console.log($("#a1 input:radio[name='question1']:checked"));
+        // playerAnswers.push()
+
+        playerAnswers.push($("#a1 input:radio[name='question1']:checked")(answers[0]));
+        console.log(playerAnswers);
+
 function tally() {
-        if (playerAnswers == answers[i]) {
+        for (var i = 0; i < 8; i++) {
+if (playerAnswers[i] === answers[i]) {
         right++
         $("#correct").text("Brains: " + right);
-} else if (playerAnswers != answers[i]) {
+} else if (playerAnswers[i] != answers[i]) {
         wrong++
         $("#incorrect").text("Half-Brains: " + wrong);
-
-} else {
+} else if (playerAnswers === "") {
         noAnswer++;
         $("#unanswered").text("No brains: " + noAnswer);
 };
-};
-
-// function tally() {
-//         if (question1 == "Pennsylvania") {
-//                 right++
-//                 $("#correct").text("Brains: " + right);
-//         } else if (question1 != "Pennsylvania") {
-//                 wrong++
-//                 $("#incorrect").text("Half-Brains: " + wrong);
-//         }
-
-//         if (question2 == "Tallahassee") {
-//                 right++
-//                 $("#correct").text("Brains: " + right);
-//         } else if (question2 != "Tallahassee") {
-//                 wrong++
-//                 $("#incorrect").text("Half-Brains: " + wrong);
-//         }
-
-//         if (question3 == "Resident Evil") {
-//                 right++
-//                 $("#correct").text("Brains: " + right);
-//         } else if (question3 != "Resident Evil") {
-//                 wrong++
-//                 $("#incorrect").text("Half-Brains: " + wrong);       
-//         }
-
-//         if (question4 == "Food") {
-//                 right++
-//                 $("#correct").text("Brains: " + right);
-//         } else if (question4 != "Food") {
-//                 wrong++
-//                 $("#incorrect").text("Half-Brains: " + wrong); 
-//         }
-
-//         if (question5 == "Glen") {
-//                 right++
-//                 $("#correct").text("Brains: " + right);
-//         } else if (question5 != "Glen") {
-//                 wrong++
-//                 $("#incorrect").text("Half-Brains: " + wrong); 
-//         }
-
-//         if (question6 == "Red Queen") {
-//                 right++
-//                 $("#correct").text("Brains: " + right);
-//         } else if (question6 != "Red Queen") {
-//                 wrong++
-//                 $("#incorrect").text("Half-Brains: " + wrong);
-//         }
-
-//         if (question7 == "The Winchester") {
-//                 right++
-//                 $("#correct").text("Brains: " + right);
-//         } else if (question7 != "The Winchester") {
-//                 wrong++
-//                 $("#incorrect").text("Half-Brains: " + wrong);
-//         }
-        
-//         if (question8 == "Rage Virus") {
-//                 right++
-//                 $("#correct").text("Brains: " + right);
-//         } else if (question8 != "Rage Virus") {
-//                 wrong++
-//                 $("#incorrect").text("Half-Brains: " + wrong);
-//         }
-         
-//         else {
-//                 noAnswer++;
-//                 $("#unanswered").text("No brains: " + noAnswer);
-//         }
-
-// };
-
+}};
 });

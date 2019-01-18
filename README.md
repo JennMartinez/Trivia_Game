@@ -6,7 +6,7 @@ Instructions:
 
 - Once the Start Button is clicked, a timer will begin. 
 
-- The player will have 120 seconds to answer 8 questions.
+- The player will have 60 seconds to answer 8 questions.
 
 - Scroll down the page to answer each presented question.
 
