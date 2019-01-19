@@ -66,35 +66,30 @@ $(".exit-button").on("click", function(event) {
         // zombieSounds.play();
 // Place tally code here //
 
-playerAnswers = $('input:radio[name="question1"]:checked').val();
-playerAnswers = $('input:radio[name="question2"]:checked').val();
-playerAnswers = $('input:radio[name="question3"]:checked').val();
-playerAnswers = $('input:radio[name="question4"]:checked').val();
-playerAnswers = $('input:radio[name="question5"]:checked').val();
-playerAnswers = $('input:radio[name="question6"]:checked').val();
-playerAnswers = $('input:radio[name="question7"]:checked').val();
-playerAnswers = $('input:radio[name="question8"]:checked').val();
-console.log(playerAnswers = $('input:radio[name="question1"]:checked').val());
-console.log(playerAnswers = $('input:radio[name="question2"]:checked').val());
-console.log(playerAnswers = $('input:radio[name="question3"]:checked').val());
-console.log(playerAnswers = $('input:radio[name="question4"]:checked').val());
-console.log(playerAnswers = $('input:radio[name="question5"]:checked').val());
-console.log(playerAnswers = $('input:radio[name="question6"]:checked').val());
-console.log(playerAnswers = $('input:radio[name="question7"]:checked').val());
-console.log(playerAnswers = $('input:radio[name="question8"]:checked').val());
-
-playerAnswers.push($('input:radio[name="question1"]:checked').val().attr(answers[0]));
-console.log(playerAnswers.push($('input:radio[name="question1"]:checked').val().attr(answers[0]))
-
+if(playerAnswers === answers) {
+        playerAnswers = $('input:radio[name="question1"]:checked').val();
+        playerAnswers = $('input:radio[name="question2"]:checked').val();
+        playerAnswers = $('input:radio[name="question3"]:checked').val();
+        playerAnswers = $('input:radio[name="question4"]:checked').val();
+        playerAnswers = $('input:radio[name="question5"]:checked').val();
+        playerAnswers = $('input:radio[name="question6"]:checked').val();
+        playerAnswers = $('input:radio[name="question7"]:checked').val();
+        playerAnswers = $('input:radio[name="question8"]:checked').val();
+        console.log(playerAnswers = $('input:radio[name="question1"]:checked').val());
+        console.log(playerAnswers = $('input:radio[name="question2"]:checked').val());
+        console.log(playerAnswers = $('input:radio[name="question3"]:checked').val());
+        console.log(playerAnswers = $('input:radio[name="question4"]:checked').val());
+        console.log(playerAnswers = $('input:radio[name="question5"]:checked').val());
+        console.log(playerAnswers = $('input:radio[name="question6"]:checked').val());
+        console.log(playerAnswers = $('input:radio[name="question7"]:checked').val());
+        console.log(playerAnswers = $('input:radio[name="question8"]:checked').val());
 
         tally();
+// playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]));
+// console.log(playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]))
 
+}       
 });
-
-// Compare users guesses versus correct answers //
-
-
-// playerAnswers = answers[0];
 
         // playerAnswers.push($(defaultValue[0]).append("#a1 input:checked"));
         // playerAnswers.push($(defaultValue[1]).append("#a2 input:checked"));
@@ -119,6 +114,9 @@ console.log(playerAnswers.push($('input:radio[name="question1"]:checked').val().
 
         // playerAnswers.push($("#a1 input:radio[name='question1']:checked")(answers[0]));
         // console.log(playerAnswers);
+
+        
+// Compare users guesses versus correct answers //
 
 function tally() {
         for (var i = 0; i < 8; i++) {
