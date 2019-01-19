@@ -6,13 +6,11 @@ var wrong = 0;
 var noAnswer = 0;
 var clockRunning = 100;
 var playerAnswers = [];
-// var zombieSounds = new Audio("./assets/bhuvububy.wav");
+var zombieSounds = new Audio("./assets/Zombie Horde.mp3");
 
 // Document ready //
 
 $(document).ready(function() {
-
-// zombieSounds.play();
 
 // HIDE timer, questions and answers, exit button,... screen //
 
@@ -31,6 +29,7 @@ $(".start").on("click", function() {
     $("#timer").show();
     $("#timer-title").show();
     $(".exit-button").show();
+    zombieSounds.play("loop");
 });
 
 // New screen STARTS the TIMER, counting down (120 sec.) //
@@ -63,8 +62,9 @@ $(".exit-button").on("click", function(event) {
         $("#timer").hide();
         $("#timer-title").hide();
         $(".game-over").show();
-        // zombieSounds.play();
-// Place tally code here //
+
+
+        // Place tally screen code here //
 
         
         playerAnswers = $('input:radio[name="question1"]:checked').val();
@@ -84,10 +84,10 @@ $(".exit-button").on("click", function(event) {
         console.log(playerAnswers = $('input:radio[name="question7"]:checked').val());
         console.log(playerAnswers = $('input:radio[name="question8"]:checked').val());
 
-        tally();
+        
 // playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]));
 // console.log(playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]))
-
+        tally();
     
 });
 
