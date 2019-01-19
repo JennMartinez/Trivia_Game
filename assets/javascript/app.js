@@ -4,7 +4,7 @@ var answers = ["Pennsylvania", "Tallahassee", "Resident Evil", "Brains", "Glen",
 var right = 0;
 var wrong = 0;
 var noAnswer = 0;
-var clockRunning = 100;
+var clockRunning = 60;
 var playerAnswers = [];
 var zombieSounds = new Audio("./assets/Zombie Horde.mp3");
 

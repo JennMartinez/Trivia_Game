@@ -18,3 +18,5 @@ Instructions:
 
 - The Game Over page will display 3 stats: Brains (Correct Answers), Half-Brains (Wrong Answers), and 
   No Brains (Unanswered).
+  
+- Refresh the page to play again!
