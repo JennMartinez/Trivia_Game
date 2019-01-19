@@ -66,7 +66,7 @@ $(".exit-button").on("click", function(event) {
         // zombieSounds.play();
 // Place tally code here //
 
-if(playerAnswers === answers) {
+        
         playerAnswers = $('input:radio[name="question1"]:checked').val();
         playerAnswers = $('input:radio[name="question2"]:checked').val();
         playerAnswers = $('input:radio[name="question3"]:checked').val();
@@ -88,7 +88,7 @@ if(playerAnswers === answers) {
 // playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]));
 // console.log(playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]))
 
-}       
+    
 });
 
         // playerAnswers.push($(defaultValue[0]).append("#a1 input:checked"));
@@ -115,7 +115,7 @@ if(playerAnswers === answers) {
         // playerAnswers.push($("#a1 input:radio[name='question1']:checked")(answers[0]));
         // console.log(playerAnswers);
 
-        
+
 // Compare users guesses versus correct answers //
 
 function tally() {
