@@ -6,7 +6,11 @@ var wrong = 0;
 var noAnswer = 0;
 var clockRunning = 60;
 var playerAnswers = [];
-var zombieSounds = new Audio("./assets/Zombie Horde.mp3");
+var x = document.getElementById("myAudio");
+
+function playAudio() {
+     x.play();
+}
 
 // Document ready //
 
@@ -20,6 +24,7 @@ $(".questions").hide();
 $(".exit-button").hide();
 $(".game-over").hide();
 
+
 // START BUTTON click takes user to new screen //
 
 $(".start").on("click", function() {
@@ -29,7 +34,8 @@ $(".start").on("click", function() {
     $("#timer").show();
     $("#timer-title").show();
     $(".exit-button").show();
-    zombieSounds.play("loop");
+    playAudio();
+
 });
 
 // New screen STARTS the TIMER, counting down (120 sec.) //
@@ -48,7 +54,7 @@ var start = setInterval(function() {
         $("#timer-title").hide();
         }
 }, 1000);
- 
+
 // Only ONE available choice can be selected from the answers to each question //
 // If DONE BUTTON is clicked, it displays a new screen //
 // CORRECT/INCORRECT/UNANSWERED question(s) are displayed at the end of the game //
@@ -63,10 +69,16 @@ $(".exit-button").on("click", function(event) {
         $("#timer-title").hide();
         $(".game-over").show();
 
-
         // Place tally screen code here //
 
-        
+        // function compareArrays(playerAnswers, answers) {
+        //         return $(playerAnswers).not(answers).length == 0 && $(answers).not(playerAnswers).length == 0
+        //     };
+            
+        //     $("#correct").html(compareArrays(playerAnswers, answers).val());
+        //     $("#incorrect").html(compareArrays(playerAnswers, answers).val());
+        //     $("#unanswered").html(compareArrays(playerAnswers, answers).val());
+
         playerAnswers = $('input:radio[name="question1"]:checked').val();
         playerAnswers = $('input:radio[name="question2"]:checked').val();
         playerAnswers = $('input:radio[name="question3"]:checked').val();
@@ -85,35 +97,20 @@ $(".exit-button").on("click", function(event) {
         console.log(playerAnswers = $('input:radio[name="question8"]:checked').val());
 
         
+
+
+        
 // playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]));
 // console.log(playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]))
         tally();
-    
+  
 });
 
         // playerAnswers.push($(defaultValue[0]).append("#a1 input:checked"));
-        // playerAnswers.push($(defaultValue[1]).append("#a2 input:checked"));
-        // playerAnswers.push($(defaultValue[2]).append("#a3 input:checked"));
-        // playerAnswers.push($(defaultValue[3]).append("#a4 input:checked"));
-        // playerAnswers.push($(defaultValue[4]).append("#a5 input:checked"));
-        // playerAnswers.push($(defaultValue[5]).append("#a6 input:checked"));
-        // playerAnswers.push($(defaultValue[6]).append("#a7 input:checked"));
-        // playerAnswers.push($(defaultValue[7]).append("#a8 input:checked"));
-        // console.log(playerAnswers);
 
         // answers = $("#a1 input:radio[name='question1']:checked");
-        // answers = $("#a2 input:radio[name='question2']:checked");
-        // answers = $("#a3 input:radio[name='question3']:checked");
-        // answers = $("#a4 input:radio[name='question4']:checked");
-        // answers = $("#a5 input:radio[name='question5']:checked");
-        // answers = $("#a6 input:radio[name='question6']:checked");
-        // answers = $("#a7 input:radio[name='question7']:checked");
-        // answers = $("#a8 input:radio[name='question8']:checked");
-        // console.log($("#a1 input:radio[name='question1']:checked"));
-        // playerAnswers.push()
 
         // playerAnswers.push($("#a1 input:radio[name='question1']:checked")(answers[0]));
-        // console.log(playerAnswers);
 
 
 // Compare users guesses versus correct answers //
