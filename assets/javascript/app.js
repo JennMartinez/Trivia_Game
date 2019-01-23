@@ -82,7 +82,9 @@ $(".exit-button").on("click", function(event) {
         playerAnswers.push($('input:radio[name="question5"]:checked').val());
         console.log("playerAnswers" + playerAnswers);
         playerAnswers.push($('input:radio[name="question6"]:checked').val());
+        console.log("playerAnswers" + playerAnswers);
         playerAnswers.push($('input:radio[name="question7"]:checked').val());
+        console.log("playerAnswers" + playerAnswers);
         playerAnswers.push($('input:radio[name="question8"]:checked').val());
         console.log("playerAnswers" + playerAnswers); 
         console.log(answers);
@@ -94,16 +96,18 @@ $(".exit-button").on("click", function(event) {
 // Compare users guesses versus correct answers //
 
 function tally() {
-        for (var i = 0; i < 8; i++) {
-if (playerAnswers === "") {
-        noAnswer++;
-        $("#unanswered").text("No brains: " + noAnswer);
-} else if (playerAnswers[i] === answers[i]) {
-        right++
-        $("#correct").text("Brains: " + right);
-} else if (playerAnswers[i] != answers[i]) {
-        wrong++
-        $("#incorrect").text("Half-Brains: " + wrong);
-};
+        for (var i = 0; i < 8; i++) { 
+                console.log("loop " + playerAnswers[i]);
+                if (typeof playerAnswers[i] !== "undefined") {
+                        if (playerAnswers[i] === answers[i]) {
+                                right++;
+                                $("#correct").text("Brains: " + right);
+                        } else if (playerAnswers[i] != answers[i]) {
+                                wrong++;
+                                $("#incorrect").text("Half-Brains: " + wrong);
+                        };
+                } else { 
+                        noAnswer++; 
+                        $("#unanswered").text("No brains: " + noAnswer);}
 }};
 });
