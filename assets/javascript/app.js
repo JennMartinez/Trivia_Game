@@ -95,12 +95,12 @@ $(".exit-button").on("click", function(event) {
 
 function tally() {
         for (var i = 0; i < 8; i++) {
-if (playerAnswers[i] === answers[i]) {
+if (playerAnswers === "") {
+        noAnswer++;
+        $("#unanswered").text("No brains: " + noAnswer);
+} else if (playerAnswers[i] === answers[i]) {
         right++
         $("#correct").text("Brains: " + right);
-} else if (playerAnswers === "") {
-                noAnswer++;
-                $("#unanswered").text("No brains: " + noAnswer);
 } else if (playerAnswers[i] != answers[i]) {
         wrong++
         $("#incorrect").text("Half-Brains: " + wrong);
