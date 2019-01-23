@@ -71,47 +71,25 @@ $(".exit-button").on("click", function(event) {
 
         // Place tally screen code here //
 
-        // function compareArrays(playerAnswers, answers) {
-        //         return $(playerAnswers).not(answers).length == 0 && $(answers).not(playerAnswers).length == 0
-        //     };
-            
-        //     $("#correct").html(compareArrays(playerAnswers, answers).val());
-        //     $("#incorrect").html(compareArrays(playerAnswers, answers).val());
-        //     $("#unanswered").html(compareArrays(playerAnswers, answers).val());
-
-        playerAnswers = $('input:radio[name="question1"]:checked').val();
-        playerAnswers = $('input:radio[name="question2"]:checked').val();
-        playerAnswers = $('input:radio[name="question3"]:checked').val();
-        playerAnswers = $('input:radio[name="question4"]:checked').val();
-        playerAnswers = $('input:radio[name="question5"]:checked').val();
-        playerAnswers = $('input:radio[name="question6"]:checked').val();
-        playerAnswers = $('input:radio[name="question7"]:checked').val();
-        playerAnswers = $('input:radio[name="question8"]:checked').val();
-        console.log(playerAnswers = $('input:radio[name="question1"]:checked').val());
-        console.log(playerAnswers = $('input:radio[name="question2"]:checked').val());
-        console.log(playerAnswers = $('input:radio[name="question3"]:checked').val());
-        console.log(playerAnswers = $('input:radio[name="question4"]:checked').val());
-        console.log(playerAnswers = $('input:radio[name="question5"]:checked').val());
-        console.log(playerAnswers = $('input:radio[name="question6"]:checked').val());
-        console.log(playerAnswers = $('input:radio[name="question7"]:checked').val());
-        console.log(playerAnswers = $('input:radio[name="question8"]:checked').val());
-
+        playerAnswers.push($('input:radio[name="question1"]:checked').val());
+        console.log("playerAnswers" + playerAnswers); 
+        playerAnswers.push($('input:radio[name="question2"]:checked').val());
+        console.log("playerAnswers" + playerAnswers);
+        playerAnswers.push($('input:radio[name="question3"]:checked').val());
+        console.log("playerAnswers" + playerAnswers);
+        playerAnswers.push($('input:radio[name="question4"]:checked').val());
+        console.log("playerAnswers" + playerAnswers);
+        playerAnswers.push($('input:radio[name="question5"]:checked').val());
+        console.log("playerAnswers" + playerAnswers);
+        playerAnswers.push($('input:radio[name="question6"]:checked').val());
+        playerAnswers.push($('input:radio[name="question7"]:checked').val());
+        playerAnswers.push($('input:radio[name="question8"]:checked').val());
+        console.log("playerAnswers" + playerAnswers); 
+        console.log(answers);
         
-
-
-        
-// playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]));
-// console.log(playerAnswers.push($('input:radio[name="question1"]:checked').val().append(answers[i]))
         tally();
   
 });
-
-        // playerAnswers.push($(defaultValue[0]).append("#a1 input:checked"));
-
-        // answers = $("#a1 input:radio[name='question1']:checked");
-
-        // playerAnswers.push($("#a1 input:radio[name='question1']:checked")(answers[0]));
-
 
 // Compare users guesses versus correct answers //
 
@@ -120,12 +98,12 @@ function tally() {
 if (playerAnswers[i] === answers[i]) {
         right++
         $("#correct").text("Brains: " + right);
+} else if (playerAnswers === "") {
+                noAnswer++;
+                $("#unanswered").text("No brains: " + noAnswer);
 } else if (playerAnswers[i] != answers[i]) {
         wrong++
         $("#incorrect").text("Half-Brains: " + wrong);
-} else if (playerAnswers === "") {
-        noAnswer++;
-        $("#unanswered").text("No brains: " + noAnswer);
 };
 }};
 });
