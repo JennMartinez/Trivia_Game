@@ -2,9 +2,11 @@ Zombie Trivia Game
 
 Instructions:
 
-- Collect as many brains as possible, by answering the zombie trivia questions, correctly, before the timer runs out.
+ https://jennmartinez.github.io/Trivia_Game/
+ 
+ - Before starting the game, make sure the volume is on for sound effects.
 
-- Before starting the game, make sure the volume is on for sound effects.
+- Collect as many brains as possible, by answering the zombie trivia questions, correctly, before the timer runs out.
 
 - To start the game, the player will click the Start Button (Enter At Your Own Risk!).
 
@@ -24,3 +26,5 @@ Instructions:
   No Brains (Unanswered).
   
 - Refresh the page to play again!
+
+
